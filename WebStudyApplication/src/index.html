@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Viewer</title>
+    <style>
+        #media-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #condition-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #media {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #condition {
+
+            text-align: left;
+            font-size: 50px;
+            font-family: Calibri
+        }
+
+        #media img,
+        video {
+            min-width: 800px;
+            min-height: 800px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .nav-button {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .nav-button svg {
+            width: 20px;
+            height: 20px;
+            fill: #000;
+        }
+
+        .nav-button-left {
+            left: 0;
+        }
+
+        .nav-button-right {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="condition-container"><span id="condition"></span>
+    </div>
+
+    <div id="media-container">
+        <div id="media"></div>
+        <button class="nav-button nav-button-left" onclick="navigateContent(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M8 12l6-6v12z" />
+            </svg>
+        </button>
+        <button class="nav-button nav-button-right" onclick="navigateContent(1)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M16 12l-6 6V6z" />
+            </svg>
+        </button>
+    </div>
+    <script type="text/javascript" src="youtubePlayer.js"></script>
+    <script type="text/javascript" src="../content.js"></script>
+    <script type="text/javascript" src="../order.js"></script>
+    <script type="text/javascript" src="conditionLogic.js"></script>
+    <script type="text/javascript" src="studylogic.js"></script>
+
+
+</body>
+
+</html>
